@@ -1,0 +1,11 @@
+<div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+    <a *ngFor="let productFiltrado of productoFiltar.buscarProducto" [routerLink]=" ['/item', productFiltrado.cod]" class="rk-item ae-masonry__item">
+        <img src="assets/productos/{{ productFiltrado.url }}.jpg" alt="">
+        <div [routerLink]=" ['/item', productFiltrado.cod]" class="item-meta">
+            <h2> {{ productFiltrado.titulo }} </h2>
+            <p> {{ productFiltrado.categoria }} </p>
+        </div>
+    </a>
+</div>
+
+<!-- *ngIf="!productosService.cargando" -->
